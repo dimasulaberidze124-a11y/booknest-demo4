@@ -1,38 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Logo Design</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demetre Sulaberidze — Web & Design</title>
+  <meta name="description" content="Web development, logo design, banner design — fast, responsive & optimized." />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --bg-overlay: linear-gradient(180deg, rgba(3,8,18,0.6), rgba(2,20,36,0.7));
+      --white:#f2fbff;
+      --neon1:#ff2d6d; --neon2:#ffd84d; --neon3:#19ff9b;
+    }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial;color:#fff;
-      background:url('assets/bg2.jpg') no-repeat center center/cover;
-      background-attachment:fixed;}
-    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
-    .content{max-width:1100px;margin:40px auto;padding:36px;background:rgba(0,0,0,0.4);border-radius:12px}
-    h1{font-size:2rem;margin-bottom:12px}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-    .gallery img{width:100%;border-radius:8px}
+    html,body{
+      height:100%;overflow:hidden; /* აღარ იძვრის */
+      font-family:Inter,system-ui,Arial;
+      background: var(--bg-overlay), url('assets/bg.jpg') no-repeat center center/cover;
+    }
+    .wrap{
+      height:100%;
+      display:flex;
+      align-items:flex-start; /* ავწიე */
+      justify-content:center;
+      padding-top:40px;
+    }
+    .card{width:100%;max-width:540px;text-align:center}
+    h1{
+      font-family:Oswald,Inter;
+      font-size:clamp(36px,6vw,60px);
+      margin-bottom:20px;
+    }
+    .list{display:flex;flex-direction:column;gap:16px;margin-top:12px}
+    .neon-btn{
+      position:relative;
+      padding:14px;
+      border-radius:8px;
+      border:2px solid rgba(255,255,255,0.08);
+      background:rgba(0,0,0,0.25);
+      font-family:Oswald, Inter;
+      font-size:clamp(18px,3.5vw,28px);
+      font-weight:700;
+      color:var(--white);
+      text-decoration:none;
+      transition:transform .2s;
+    }
+    .neon-btn:hover{transform:scale(1.03)}
+    .neon-btn::before{
+      content:'';position:absolute;inset:-4px;border-radius:10px;
+      filter:blur(18px);opacity:0.85;z-index:-1;
+    }
+    .n1::before{box-shadow:0 0 35px 8px var(--neon1);}
+    .n2::before{box-shadow:0 0 35px 8px var(--neon2);}
+    .n3::before{box-shadow:0 0 35px 8px var(--neon3);}
+    .icons{display:flex;justify-content:center;gap:16px;margin-top:26px}
+    .icons a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.08);color:#fff;text-decoration:none}
+    footer{position:fixed;left:0;right:0;bottom:10px;text-align:center;color:#fff;font-weight:600}
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Logo Design</h1>
-    <div class="gallery">
-      <img src="assets/logo1.png" alt="Logo 1"/>
-      <img src="assets/logo2.png" alt="Logo 2"/>
-      <img src="assets/logo3.png" alt="Logo 3"/>
-      <img src="assets/logo4.png" alt="Logo 4"/>
-      <img src="assets/logo5.jpeg" alt="Logo 5"/>
-      <img src="assets/logo6.jpeg" alt="Logo 6"/>
-      <img src="assets/logo7.png" alt="Logo 7"/>
-      <img src="assets/logo8.jpg" alt="Logo 8"/>
-      <img src="assets/logo9.png" alt="Logo 9"/>
-      <img src="assets/logo10.png" alt="Logo 10"/>
-      <!-- აქ შეგიძლია დაამატო logo11.png, logo12.png და ასე შემდეგ -->
+  <div class="wrap">
+    <div class="card">
+      <h1>Welcome!</h1>
+      <div class="list">
+        <a class="neon-btn n1" href="web.html">Web development</a>
+        <a class="neon-btn n2" href="logo.html">Logo design</a>
+        <a class="neon-btn n3" href="banner.html">Banner design</a>
+      </div>
+      <div class="icons">
+        <a href="https://www.instagram.com/demetresulaberidze_124" target="_blank">IG</a>
+        <a href="https://x.com/Demetre_124" target="_blank">X</a>
+      </div>
     </div>
   </div>
+  <footer>
+    Gmail: <a href="mailto:demetresulaberidze124@gmail.com" style="color:#fff">demetresulaberidze124@gmail.com</a>
+  </footer>
 </body>
 </html>
