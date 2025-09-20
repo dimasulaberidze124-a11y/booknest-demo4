@@ -1,105 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Demetre Sulaberidze — Web & Design</title>
-  <meta name="description" content="Web development, logo design, banner design — fast, responsive & optimized." />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Banner Design</title>
   <style>
-    :root{
-      --bg-overlay: linear-gradient(180deg, rgba(3,8,18,0.55), rgba(2,20,36,0.55));
-      --white:#f2fbff; --neon1:#ff2d6d; --neon2:#ffd84d; --neon3:#19ff9b;
-    }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0}
     body{
-      font-family:Inter,system-ui,Arial;
-      color:var(--white);
-      -webkit-font-smoothing:antialiased;
-      background-image: var(--bg-overlay), url('assets/bg.jpg');
-      background-repeat:no-repeat;
-      background-position:center;
+      margin:0;font-family:Inter,Arial;color:#fff;
+      background:url('assets/bg2.jpg') no-repeat center center/cover;
       background-attachment:fixed;
-      background-size:cover;
     }
-
-    /* Desktop: hero locked (no scroll) so background stays static and page doesn't scroll */
-    @media (min-width:768px){
-      html,body{overflow:hidden;height:100vh;}
-    }
-    /* Mobile: allow scroll if viewport is small */
-    @media (max-width:767px){
-      html,body{overflow:auto;}
-    }
-
-    /* hero layout: push content a bit downward (padding-top) so welcome appears higher visually */
-    .wrap{
-      height:100vh;
-      display:flex;
-      align-items:flex-start;       /* push to top */
-      justify-content:center;
-      padding-top:18vh;            /* adjust how high welcome sits */
-      padding-left:12px;
-      padding-right:12px;
-    }
-
-    .card{width:100%;max-width:560px;text-align:center}
-    h1{
-      font-family:Oswald,Inter,system-ui;
-      font-weight:400;
-      font-size:clamp(36px,6vw,64px);
-      margin:6px 0 12px;
-      line-height:1;
-    }
-
-    .list{display:flex;flex-direction:column;gap:16px;margin-top:8px}
-    .neon-btn{
-      position:relative;padding:16px 14px;border-radius:10px;
-      border:2px solid rgba(255,255,255,0.08);
-      background:rgba(0,0,0,0.28);
-      font-family:Oswald, Inter;font-size:clamp(18px,3.6vw,30px);font-weight:700;
-      color:var(--white);cursor:pointer;transition:transform .18s, box-shadow .18s;
-      text-decoration:none;display:inline-block;
-    }
-    .neon-btn::before{
-      content:'';position:absolute;inset:-6px;border-radius:12px;pointer-events:none;
-      filter:blur(30px);opacity:0.95;transition:opacity .22s;
-    }
-    .neon-btn:hover{transform:translateY(-4px) scale(1.02)}
-    .n1::before{box-shadow:0 0 60px 12px var(--neon1);opacity:0.85}
-    .n2::before{box-shadow:0 0 60px 12px var(--neon2);opacity:0.85}
-    .n3::before{box-shadow:0 0 60px 12px var(--neon3);opacity:0.85}
-
-    .icons{display:flex;justify-content:center;gap:18px;margin-top:22px}
-    .icons a{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);color:var(--white);text-decoration:none}
-    .icons a:hover{background:rgba(255,255,255,0.12)}
-
-    footer{position:fixed;left:0;right:0;bottom:10px;text-align:center;color:var(--white);font-weight:700;padding:8px 12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03))}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
+    .content{position:relative;z-index:1;max-width:1200px;margin:40px auto;padding:36px;background:rgba(0,0,0,0.38);border-radius:12px}
+    h1{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+    p{font-size:1.12rem;color:#cfeaf1;margin-bottom:20px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .gallery .item{background:rgba(255,255,255,0.02);padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;min-height:140px}
+    .gallery img{max-width:100%;max-height:180px;object-fit:contain}
+    @media (min-width:1200px){ .gallery .item{min-height:180px} .gallery img{max-height:220px} }
   </style>
 </head>
 <body>
-  <div class="wrap" aria-hidden="false">
-    <div class="card" role="main">
-      <h1 id="welcome">Welcome !</h1>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Banner Design</h1>
+    <p>Hello! I can design high-quality banners for your business or social media platforms. <strong>here is banners as i can make.</strong></p>
 
-      <div class="list" role="list" aria-label="Services">
-        <a class="neon-btn n1" href="web.html">Web development</a>
-        <a class="neon-btn n2" href="logo.html">Logo design</a>
-        <a class="neon-btn n3" href="banner.html">Banner design</a>
-      </div>
-
-      <div class="icons" aria-hidden="true" style="margin-top:26px">
-        <a href="https://www.instagram.com/demetresulaberidze_124" target="_blank" aria-label="Instagram">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="3"></circle><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://x.com/Demetre_124" target="_blank" aria-label="X">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.77l-5.214-6.84-5.967 6.84H2.281l7.73-8.857L1.89 2.25h6.633l4.713 6.239 5.008-6.239Z"/></svg>
-        </a>
-      </div>
+    <div class="gallery">
+      <!-- 17 slots, add your files into assets folder -->
+      <div class="item"><img src="assets/banner1.jpg" alt="Banner 1"></div>
+      <div class="item"><img src="assets/banner2.jpeg" alt="Banner 2"></div>
+      <div class="item"><img src="assets/banner3.jpg" alt="Banner 3"></div>
+      <div class="item"><img src="assets/banner4.jpg" alt="Banner 4"></div>
+      <div class="item"><img src="assets/banner5.jpg" alt="Banner 5"></div>
+      <div class="item"><img src="assets/banner6.jpg" alt="Banner 6"></div>
+      <div class="item"><img src="assets/banner7.jpg" alt="Banner 7"></div>
+      <div class="item"><img src="assets/banner8.jpg" alt="Banner 8"></div>
+      <div class="item"><img src="assets/banner9.jpg" alt="Banner 9"></div>
+      <div class="item"><img src="assets/banner10.jpg" alt="Banner 10"></div>
+      <div class="item"><img src="assets/banner11.jpg" alt="Banner 11"></div>
+      <div class="item"><img src="assets/banner12.jpg" alt="Banner 12"></div>
+      <div class="item"><img src="assets/banner13.jpg" alt="Banner 13"></div>
+      <div class="item"><img src="assets/banner14.jpg" alt="Banner 14"></div>
+      <div class="item"><img src="assets/banner15.jpg" alt="Banner 15"></div>
+      <div class="item"><img src="assets/banner16.jpg" alt="Banner 16"></div>
+      <div class="item"><img src="assets/banner17.jpg" alt="Banner 17"></div>
     </div>
   </div>
-
-  <footer>Gmail: <a href="mailto:demetresulaberidze124@gmail.com">demetresulaberidze124@gmail.com</a></footer>
 </body>
 </html>
