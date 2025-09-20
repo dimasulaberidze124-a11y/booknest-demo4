@@ -5,33 +5,39 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Web Development</title>
   <style>
-    body{
-      margin:0;font-family:Arial;color:#fff;
-      background: url('assets/bg.jpg') no-repeat center center/cover;
-      background-attachment:fixed;
-    }
-    .overlay{background:rgba(0,0,0,0.6);position:fixed;top:0;left:0;width:100%;height:100%;}
-    .content{position:relative;z-index:1;max-width:900px;margin:auto;padding:40px;text-align:center;}
-    h1{font-size:2.5rem;margin-bottom:20px;}
-    p{font-size:1.2rem;line-height:1.6;margin-bottom:25px;}
-    ul{list-style:none;padding:0;}
-    ul li{margin:10px 0;}
-    a{color:#06b6d4;text-decoration:none;font-weight:bold;}
-    a:hover{text-decoration:underline;}
+    :root{--accent:#06b6d4;--card-bg:rgba(0,0,0,0.45);--glow:0 0 24px rgba(6,182,212,0.18)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial;color:#fff;
+      background: url('assets/bg2.jpg') no-repeat center center/cover;
+      background-attachment: fixed; background-size:cover;}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .content{position:relative;z-index:1;max-width:1100px;margin:40px auto;padding:40px;border-radius:12px;background:var(--card-bg);box-shadow:var(--glow);}
+    h1{font-size:clamp(28px,4vw,40px);margin-bottom:14px}
+    p{font-size:1.15rem;color:#cfeaf1;margin-bottom:18px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .site-card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;border:2px solid rgba(255,255,255,0.04);display:flex;flex-direction:column;gap:12px;align-items:flex-start;transition:transform .18s, box-shadow .18s}
+    .site-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+    .site-card .title{font-weight:700;font-size:1.05rem}
+    .site-card a{color:var(--accent);text-decoration:none;font-weight:700}
+    @media (min-width:1200px){ .content{padding:56px} .site-card{padding:22px} .site-card .title{font-size:1.15rem} }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
-  <div class="content">
-    <h1>Web Development</h1>
-    <p>Hello! I can create for you a custom small website with multiple pages.</p>
-    <ul>
-      <li><a href="https://breadandwine.ge/" target="_blank">Bread and Wine</a></li>
-      <li><a href="https://sunsetpiermarinabay.com/" target="_blank">Sunset Pier Marina Bay</a></li>
-      <li><a href="https://www.smallsitesalliance.com/" target="_blank">Small Sites Alliance</a></li>
-      <li><a href="https://www.tripadvisor.com/Restaurant_Review-g294195-d27165300-Reviews-Restaurant_Sene-Tbilisi.html" target="_blank">Restaurant Sene</a></li>
-      <li><a href="https://www.thefortat49.com/kitchen" target="_blank">The Fort at 49</a></li>
-    </ul>
+  <div class="wrap">
+    <div class="content">
+      <h1>Web Development</h1>
+      <p>Hello! I can create for you a custom small website with multiple pages. It can be for your business or any personal project. The site you are currently on is also created by me — <strong>here is sites as i can make</strong>:</p>
+
+      <div class="grid">
+        <div class="site-card"><div class="title">Bread and Wine</div><a href="https://breadandwine.ge/" target="_blank">Open site →</a></div>
+        <div class="site-card"><div class="title">Sunset Pier Marina Bay</div><a href="https://sunsetpiermarinabay.com/" target="_blank">Open site →</a></div>
+        <div class="site-card"><div class="title">Small Sites Alliance</div><a href="https://www.smallsitesalliance.com/" target="_blank">Open site →</a></div>
+        <div class="site-card"><div class="title">Restaurant Sene (Tripadvisor)</div><a href="https://www.tripadvisor.com/Restaurant_Review-g294195-d27165300-Reviews-Restaurant_Sene-Tbilisi.html" target="_blank">Open site →</a></div>
+        <div class="site-card"><div class="title">The Fort at 49</div><a href="https://www.thefortat49.com/kitchen" target="_blank">Open site →</a></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
