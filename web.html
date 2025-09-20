@@ -5,41 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Web Development</title>
   <style>
-    :root{--accent:#06b6d4;--card-bg:rgba(0,0,0,0.45);--glow:0 0 30px rgba(6,182,212,0.18)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      margin:0;font-family:Inter,Arial;color:#fff;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial;color:#fff;
       background: url('assets/bg2.jpg') no-repeat center center/cover;
-      background-attachment: fixed; background-size:cover;
-    }
+      background-attachment:fixed;}
     .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
-    .wrap{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:28px}
-    .content{position:relative;z-index:1;max-width:1100px;margin:60px auto;padding:40px;border-radius:12px;background:var(--card-bg);box-shadow:var(--glow)}
-    h1{font-size:clamp(28px,4vw,44px);margin-bottom:14px}
-    p{font-size:1.15rem;color:#cfeaf1;margin-bottom:18px}
-    .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-    .site-card{background:rgba(255,255,255,0.03);padding:22px;border-radius:14px;border:2px solid rgba(255,255,255,0.04);display:flex;flex-direction:column;gap:12px;align-items:flex-start;transition:transform .18s, box-shadow .18s}
-    .site-card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
-    .site-card .title{font-weight:800;font-size:1.1rem}
-    .site-card a{color:var(--accent);text-decoration:none;font-weight:700}
-    @media (min-width:1200px){ .content{padding:56px} .site-card{padding:26px} .site-card .title{font-size:1.2rem} }
+    .content{max-width:1100px;margin:60px auto;padding:36px;background:rgba(0,0,0,0.45);border-radius:12px}
+    h1{font-size:2rem;margin-bottom:12px}
+    p{margin-bottom:20px;color:#cfeaf1}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .site-card{background:rgba(255,255,255,0.05);padding:16px;border-radius:10px}
+    .site-card a{color:#06b6d4;text-decoration:none;font-weight:700}
   </style>
 </head>
 <body>
   <div class="overlay"></div>
-  <div class="wrap">
-    <div class="content">
-      <h1>Web Development</h1>
-      <p>Hello! I can create for you a custom small website with multiple pages. It can be for your business or any personal project. The site you are currently on is also created by me — <strong>here is sites as i can make</strong>:</p>
-
-      <div class="grid">
-        <div class="site-card"><div class="title">Bread and Wine</div><a href="https://breadandwine.ge/" target="_blank">Open site →</a></div>
-        <div class="site-card"><div class="title">Sunset Pier Marina Bay</div><a href="https://sunsetpiermarinabay.com/" target="_blank">Open site →</a></div>
-        <div class="site-card"><div class="title">Small Sites Alliance</div><a href="https://www.smallsitesalliance.com/" target="_blank">Open site →</a></div>
-        <div class="site-card"><div class="title">Restaurant Sene (Tripadvisor)</div><a href="https://www.tripadvisor.com/Restaurant_Review-g294195-d27165300-Reviews-Restaurant_Sene-Tbilisi.html" target="_blank">Open site →</a></div>
-        <div class="site-card"><div class="title">The Fort at 49</div><a href="https://www.thefortat49.com/kitchen" target="_blank">Open site →</a></div>
-      </div>
+  <div class="content">
+    <h1>Web Development</h1>
+    <p>I can create custom websites. Examples:</p>
+    <div class="grid">
+      <div class="site-card"><div>Bread and Wine</div><a href="https://breadandwine.ge/" target="_blank">Open →</a></div>
+      <div class="site-card"><div>Sunset Pier Marina Bay</div><a href="https://sunsetpiermarinabay.com/" target="_blank">Open →</a></div>
+      <div class="site-card"><div>Small Sites Alliance</div><a href="https://www.smallsitesalliance.com/" target="_blank">Open →</a></div>
     </div>
   </div>
 </body>
