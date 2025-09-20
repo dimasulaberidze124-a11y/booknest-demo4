@@ -5,26 +5,70 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Logo Design</title>
   <style>
-    body{margin:0;font-family:Arial;color:#fff;background:url('assets/bg.jpg') no-repeat center center/cover;background-attachment:fixed;}
-    .overlay{background:rgba(0,0,0,0.6);position:fixed;top:0;left:0;width:100%;height:100%;}
-    .content{position:relative;z-index:1;max-width:900px;margin:auto;padding:40px;text-align:center;}
-    h1{font-size:2.5rem;margin-bottom:20px;}
-    p{font-size:1.2rem;margin-bottom:25px;}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-    .gallery img{width:100%;border-radius:8px;}
+    body {
+      margin:0;
+      font-family:Arial, sans-serif;
+      color:#fff;
+      background:url('assets/bg.jpg') no-repeat center center/cover;
+      background-attachment:fixed;
+    }
+    .overlay {
+      background:rgba(0,0,0,0.6);
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+    }
+    .content {
+      position:relative;
+      z-index:1;
+      max-width:1000px;
+      margin:auto;
+      padding:40px;
+      text-align:center;
+    }
+    h1 {
+      font-size:2.8rem;
+      margin-bottom:20px;
+    }
+    p {
+      font-size:1.3rem;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+    .gallery img {
+      width:100%;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.5);
+      transition:transform 0.3s;
+    }
+    .gallery img:hover {
+      transform:scale(1.05);
+    }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <div class="content">
     <h1>Logo Design</h1>
-    <p>Hello! I can create high-quality logos in 3D style and many other styles.  
-    I provide files in PNG, SVG, and JPG formats.</p>
+    <p>I can create a high-quality, customized logo for your business or social media.  
+    Final files can be delivered in PNG, JPG, or SVG formats.</p>
     <div class="gallery">
-      <!-- Upload your logos here -->
+      <!-- Logos (you can add up to 10 or more) -->
       <img src="assets/logo1.png" alt="Logo 1"/>
-      <img src="assets/logo2.png" alt="Logo 2"/>
-      <img src="assets/logo3.png" alt="Logo 3"/>
+      <img src="assets/logo2.jpg" alt="Logo 2"/>
+      <img src="assets/logo3.jpeg" alt="Logo 3"/>
+      <img src="assets/logo4.png" alt="Logo 4"/>
+      <img src="assets/logo5.jpg" alt="Logo 5"/>
+      <img src="assets/logo6.jpeg" alt="Logo 6"/>
+      <img src="assets/logo7.png" alt="Logo 7"/>
+      <img src="assets/logo8.jpg" alt="Logo 8"/>
+      <img src="assets/logo9.jpeg" alt="Logo 9"/>
+      <img src="assets/logo10.png" alt="Logo 10"/>
     </div>
   </div>
 </body>
