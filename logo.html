@@ -5,38 +5,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Logo Design</title>
   <style>
-    body {
-      margin:0;
-      font-family:Arial, sans-serif;
-      color:#fff;
-      background:url('assets/bg.jpg') no-repeat center center/cover;
-      background-attachment:fixed;
-    }
-    .overlay {background:rgba(0,0,0,0.6);position:fixed;top:0;left:0;width:100%;height:100%;}
-    .content {position:relative;z-index:1;max-width:1000px;margin:auto;padding:40px;text-align:center;}
-    h1 {font-size:2.8rem;margin-bottom:20px;}
-    p {font-size:1.3rem;margin-bottom:30px;line-height:1.6;}
-    .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-    .gallery img {width:100%;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:transform 0.3s;}
-    .gallery img:hover {transform:scale(1.05);}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial;color:#fff;
+      background:url('assets/bg2.jpg') no-repeat center center/cover;
+      background-attachment:fixed}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
+    .content{position:relative;z-index:1;max-width:1100px;margin:40px auto;padding:36px;background:rgba(0,0,0,0.38);border-radius:12px}
+    h1{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+    p{font-size:1.12rem;color:#cfeaf1;margin-bottom:20px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+    .gallery .item{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;min-height:120px}
+    .gallery img{max-width:100%;max-height:120px;object-fit:contain}
+    @media (min-width:1200px){ .gallery .item{min-height:160px} .gallery img{max-height:140px} }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <div class="content">
     <h1>Logo Design</h1>
-    <p>I can create a high-quality, customized logo for your business or social media.</p>
+    <p>I can create a high-quality, customized logo for your business or social media. <strong>here is logos as i can make.</strong></p>
+
     <div class="gallery">
-      <img src="assets/logo1.png" alt="Logo 1"/>
-      <img src="assets/logo2.png" alt="Logo 2"/>
-      <img src="assets/logo3.png" alt="Logo 3"/>
-      <img src="assets/logo4.png" alt="Logo 4"/>
-      <img src="assets/logo5.png.jpeg" alt="Logo 5"/>
-      <img src="assets/logo6.jpeg" alt="Logo 6"/>
-      <img src="assets/logo7.jpeg" alt="Logo 7"/>
-      <img src="assets/logo8.png" alt="Logo 8"/>
-      <img src="assets/logo9.png" alt="Logo 9"/>
-      <img src="assets/logo10.png" alt="Logo 10"/>
+      <!-- შეგიძლია იმდენი დაამატო რამდენიც გინდა -->
+      <div class="item"><img src="assets/logo1.png" alt="Logo 1"></div>
+      <div class="item"><img src="assets/logo2.jpg" alt="Logo 2"></div>
+      <div class="item"><img src="assets/logo3.jpeg" alt="Logo 3"></div>
+      <div class="item"><img src="assets/logo4.png" alt="Logo 4"></div>
+      <div class="item"><img src="assets/logo5.jpeg" alt="Logo 5"></div>
     </div>
   </div>
 </body>
