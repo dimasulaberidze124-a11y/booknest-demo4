@@ -5,48 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Banner Design</title>
   <style>
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      margin:0;font-family:Inter,Arial;color:#fff;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial;color:#fff;
       background:url('assets/bg2.jpg') no-repeat center center/cover;
-      background-attachment:fixed;
-    }
+      background-attachment:fixed;}
     .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1}
-    .content{position:relative;z-index:1;max-width:1200px;margin:40px auto;padding:36px;background:rgba(0,0,0,0.38);border-radius:12px}
-    h1{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
-    p{font-size:1.12rem;color:#cfeaf1;margin-bottom:20px}
+    .content{max-width:1100px;margin:40px auto;padding:36px;background:rgba(0,0,0,0.4);border-radius:12px}
+    h1{font-size:2rem;margin-bottom:12px}
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .gallery .item{background:rgba(255,255,255,0.02);padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;min-height:140px}
-    .gallery img{max-width:100%;max-height:180px;object-fit:contain}
-    @media (min-width:1200px){ .gallery .item{min-height:180px} .gallery img{max-height:220px} }
+    .gallery img{width:100%;border-radius:8px}
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <div class="content">
     <h1>Banner Design</h1>
-    <p>Hello! I can design high-quality banners for your business or social media platforms. <strong>here is banners as i can make.</strong></p>
-
     <div class="gallery">
-      <!-- 17 slots, add your files into assets folder -->
-      <div class="item"><img src="assets/banner1.jpg" alt="Banner 1"></div>
-      <div class="item"><img src="assets/banner2.jpeg" alt="Banner 2"></div>
-      <div class="item"><img src="assets/banner3.jpg" alt="Banner 3"></div>
-      <div class="item"><img src="assets/banner4.jpg" alt="Banner 4"></div>
-      <div class="item"><img src="assets/banner5.jpg" alt="Banner 5"></div>
-      <div class="item"><img src="assets/banner6.jpg" alt="Banner 6"></div>
-      <div class="item"><img src="assets/banner7.jpg" alt="Banner 7"></div>
-      <div class="item"><img src="assets/banner8.jpg" alt="Banner 8"></div>
-      <div class="item"><img src="assets/banner9.jpg" alt="Banner 9"></div>
-      <div class="item"><img src="assets/banner10.jpg" alt="Banner 10"></div>
-      <div class="item"><img src="assets/banner11.jpg" alt="Banner 11"></div>
-      <div class="item"><img src="assets/banner12.jpg" alt="Banner 12"></div>
-      <div class="item"><img src="assets/banner13.jpg" alt="Banner 13"></div>
-      <div class="item"><img src="assets/banner14.jpg" alt="Banner 14"></div>
-      <div class="item"><img src="assets/banner15.jpg" alt="Banner 15"></div>
-      <div class="item"><img src="assets/banner16.jpg" alt="Banner 16"></div>
-      <div class="item"><img src="assets/banner17.jpg" alt="Banner 17"></div>
+      <img src="assets/banner1.jpeg" alt="Banner 1"/>
+      <img src="assets/banner2.jpeg" alt="Banner 2"/>
+      <img src="assets/banner3.jpg" alt="Banner 3"/>
+      <img src="assets/banner4.png" alt="Banner 4"/>
+      <img src="assets/banner5.jpeg" alt="Banner 5"/>
+      <!-- აქაც დაამატებ banner6.jpg, banner7.png და ასე შემდეგ -->
     </div>
   </div>
 </body>
