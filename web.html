@@ -1,38 +1,71 @@
 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Web Development</title>
+  <style>
+    :root{--white:#f2fbff;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Arial;color:var(--white);background-color:#021426}
+    /* fixed background layer to avoid white gaps while scrolling */
+    body::before{
+      content:"";
+      position:fixed;inset:0;
+      background-image: url('assets/bg.jpg');
+      background-position:center center;background-size:cover;background-repeat:no-repeat;
+      z-index:-3;transform:translateZ(0);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55));z-index:-2;
+    }
 
-<html lang="en">  
-<head>  
-  <meta charset="UTF-8"/>  
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>  
-  <title>Web Development</title>  
-  <style>  
-    body{  
-      margin:0;font-family:Arial;color:#fff;  
-      background: url('assets/bg.jpg') no-repeat center center/cover;  
-      background-attachment:fixed;  
-    }  
-    .overlay{background:rgba(0,0,0,0.6);position:fixed;top:0;left:0;width:100%;height:100%;}  
-    .content{position:relative;z-index:1;max-width:900px;margin:auto;padding:40px;text-align:center;}  
-    h1{font-size:2.5rem;margin-bottom:20px;}  
-    p{font-size:1.2rem;line-height:1.6;margin-bottom:25px;}  
-    ul{list-style:none;padding:0;}  
-    ul li{margin:10px 0;}  
-    a{color:#06b6d4;text-decoration:none;font-weight:bold;}  
-    a:hover{text-decoration:underline;}  
-  </style>  
-</head>  
-<body>  
-  <div class="overlay"></div>  
-  <div class="content">  
-    <h1>Web Development</h1>  
-    <p>Hello! I can create for you a custom small website with multiple pages.</p>  
-    <ul>  
-      <li><a href="https://breadandwine.ge/" target="_blank">Bread and Wine</a></li>  
-      <li><a href="https://sunsetpiermarinabay.com/" target="_blank">Sunset Pier Marina Bay</a></li>  
-      <li><a href="https://www.smallsitesalliance.com/" target="_blank">Small Sites Alliance</a></li>  
-      <li><a href="https://www.tripadvisor.com/Restaurant_Review-g294195-d27165300-Reviews-Restaurant_Sene-Tbilisi.html" target="_blank">Restaurant Sene</a></li>  
-      <li><a href="https://www.thefortat49.com/kitchen" target="_blank">The Fort at 49</a></li>  
-    </ul>  
-  </div>  
-</body>  
+    .container{position:relative;z-index:1;max-width:1000px;margin:32px auto;padding:28px;background:transparent}
+    h1{font-size:2.5rem;margin-bottom:18px}
+    p{font-size:1.12rem;line-height:1.6;margin-bottom:20px}
+    .sites{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .site-frame{
+      display:block;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+      border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:var(--white);
+      transition:transform .22s, box-shadow .22s;box-shadow:0 8px 20px rgba(0,0,0,0.45);
+    }
+    .site-frame:hover{transform:translateY(-6px)}
+    .site-title{font-weight:700;font-size:1.06rem;margin-bottom:6px;color:var(--white)}
+    .site-url{color:var(--accent);font-size:0.95rem;word-break:break-all}
+    @media (max-width:600px){.container{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Web Development</h1>
+    <p>Hello! I can create for you a custom small website with multiple pages. like this</p>
+
+    <div class="sites" role="list">
+      <a class="site-frame" href="https://breadandwine.ge/" target="_blank" rel="noopener">
+        <div class="site-title">Bread and Wine</div>
+        <div class="site-url">breadandwine.ge</div>
+      </a>
+
+      <a class="site-frame" href="https://sunsetpiermarinabay.com/" target="_blank" rel="noopener">
+        <div class="site-title">Sunset Pier Marina Bay</div>
+        <div class="site-url">sunsetpiermarinabay.com</div>
+      </a>
+
+      <a class="site-frame" href="https://www.smallsitesalliance.com/" target="_blank" rel="noopener">
+        <div class="site-title">Small Sites Alliance</div>
+        <div class="site-url">smallsitesalliance.com</div>
+      </a>
+
+      <a class="site-frame" href="https://www.tripadvisor.com/Restaurant_Review-g294195-d27165300-Reviews-Restaurant_Sene-Tbilisi.html" target="_blank" rel="noopener">
+        <div class="site-title">Restaurant Sene</div>
+        <div class="site-url">tripadvisor.com — Restaurant Sene</div>
+      </a>
+
+      <a class="site-frame" href="https://www.thefortat49.com/kitchen" target="_blank" rel="noopener">
+        <div class="site-title">The Fort at 49</div>
+        <div class="site-url">thefortat49.com</div>
+      </a>
+    </div>
+  </div>
+</body>
 </html>
