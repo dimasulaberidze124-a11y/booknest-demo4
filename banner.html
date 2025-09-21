@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Banner Design</title>
   <style>
+    :root{--white:#f2fbff;--neon: rgba(6,182,212,0.95);--neon-soft: rgba(6,182,212,0.12)}
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Arial;color:#fff;background-color:#021426}
-    body::before{content:"";position:fixed;inset:0;background-image:url('assets/bg.jpg');background-size:cover;background-position:center;z-index:-3}
-    body::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-2}
+    html,body{height:100%;margin:0;font-family:Arial;color:var(--white);background-color:#021426}
     .wrap{position:relative;z-index:1;max-width:1200px;margin:28px auto;padding:30px}
-    h1{font-size:2.4rem;margin-bottom:12px}
-    p{font-size:1.14rem;margin-bottom:18px;line-height:1.6}
+    h1{font-size:2.2rem;margin-bottom:10px}
+    p{font-size:1.04rem;margin-bottom:18px;line-height:1.5}
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-    .frame{padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));border:1px solid rgba(255,255,255,0.06);box-shadow:0 8px 24px rgba(0,0,0,0.45);transition:transform .22s}
+    .frame{position:relative;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(6,182,212,0.12);box-shadow:0 10px 22px rgba(0,0,0,0.6);transition:transform .22s;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+    .frame::before{content:"";position:absolute;inset:-8px;border-radius:12px;pointer-events:none;box-shadow:0 0 40px 10px var(--neon-soft);filter:blur(16px);z-index:0}
     .frame:hover{transform:translateY(-6px)}
-    .frame img{width:100%;height:auto;border-radius:8px;display:block}
+    .frame img{position:relative;z-index:1;max-width:100%;max-height:100%;object-fit:cover;border-radius:6px}
     @media (max-width:480px){.frame img{height:auto}}
   </style>
 </head>
@@ -25,7 +25,7 @@
     <p>Hello! I can design high-quality banners for your business or social media platforms. like this</p>
 
     <div class="gallery" role="list">
-      <!-- keep existing banners 1..3 -->
+      <!-- Existing banners kept as-is -->
       <div class="frame"><img src="assets/banner1.jpeg" alt="Banner 1"/></div>
       <div class="frame"><img src="assets/banner2.jpeg" alt="Banner 2"/></div>
       <div class="frame"><img src="assets/banner3.jpeg" alt="Banner 3"/></div>
